@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: cla-frontend
+spec:
+  template:
+    metadata:
+      labels:
+        app: cla-frontend
+    spec:
+      containers:
+        -
+          image: 880656497252.dkr.ecr.us-east-1.amazonaws.com/cla
+          imagePullPolicy: Always
+          name: cla-frontend
+          ports:
+            -
+              containerPort: 3000
+              name: http

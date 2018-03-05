@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: "cla-frontend"
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    kubernetes.io/tls-acme: "true"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+spec:
+  rules:
+  - host: cla-frontend.apps.k8s.kops.integration.dsd.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: cla-frontend
+          servicePort: 3000
