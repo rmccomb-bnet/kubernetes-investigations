@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: opsmanual-app
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: opsmanual-app
+    spec:
+      containers:
+      - name: opsmanual
+        image: 926803513772.dkr.ecr.us-west-1.amazonaws.com/opsman-sh:latest
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+        - name: reggie-yates

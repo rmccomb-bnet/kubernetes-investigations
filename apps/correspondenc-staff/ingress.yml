@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: correspondence-tool-ing
+spec:
+  rules:
+  - host: correspondence-tool.apps.cloud-platforms-sandbox.k8s.integration.dsd.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: correspondence-tool-svc
+          servicePort: 80

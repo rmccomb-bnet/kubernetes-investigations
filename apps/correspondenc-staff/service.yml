@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: correspondence-tool-svc
+  labels:
+    app: correspondence-tool-svc
+spec:
+  ports:
+  - port: 80
+    name: http
+    targetPort: 80
+  selector:
+    app: correspondence-tool-app
