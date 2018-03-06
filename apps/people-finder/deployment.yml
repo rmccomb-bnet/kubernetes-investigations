@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: people-finder
+spec:
+  template:
+    metadata:
+      labels:
+        app: people-finder
+    spec:
+      containers:
+        -
+          image: 926803513772.dkr.ecr.eu-west-1.amazonaws.com/peoplefinder 
+          imagePullPolicy: Always
+          name: people-finder
+          ports:
+            -
+              containerPort: 80
+              name: http
