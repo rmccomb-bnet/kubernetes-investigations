@@ -17,7 +17,6 @@ spec:
           - name: ADDRESSFINDER_API_HOST
             value: "http://addressfinder.dsd.io"
           - name: ADDRESSFINDER_API_TOKEN
-            value: 68a10c9b236043d0cdf169465ec3cf02f2e242d6
           - name: ALLOWED_HOSTS
             value: "*"
           - name: APP_NAME
@@ -27,11 +26,8 @@ spec:
           - name: BACKEND_BASE_URI
             value: https://cla-frontend.apps.k8s.kops.integration.dsd.io
           - name: CALL_CENTRE_CLIENT_ID
-            value: b4b9220ffcb11ebfdab1
           - name: CALL_CENTRE_SECRET_ID
-            value: 2df71313bdd38a2e1b815015e1b14387e7681d41
           - name: CALL_PROVIDER_SECRET_ID
-            value: 0494287c65bdf61d29f0eeed467ec8e090f0d80f
           - name: CLA_ENV
             value: Staging
           - name: CLA_PROVIDER_CLIENT_ID
@@ -47,13 +43,11 @@ spec:
           - name: POSTCODEINFO_API_URL
             value: https://postcodeinfo.service.justice.gov.uk/
           - name: POSTCODEINFO_AUTH_TOKEN
-            value: 4708353c73c1d5d553a6daf7432effb27c2c9f24
           - name: RAVEN_CONFIG_DSN
             value: https://cda6cf7d9c2b4d6ab86e59004d2b220c:33b0af055e064053b1df1027ef7c44f8@sentry.service.dsd.io/12
           - name: RAVEN_CONFIG_SITE
             value: "[Staging] Frontend"
           - name: SECRET_KEY
-            value: odimf%y#bszp359fe5z-
           - name: zhd77m7_
             value: "*m768^@rr8*hk5knvd^-p"
           - name: SITE_HOSTNAME
@@ -61,7 +55,6 @@ spec:
           - name: SOCKETIO_SERVER_URL
             value: /socket.io
           - name: ZENDESK_API_TOKEN
-            value: LS82Sntzl0LXUDtTvykFUG1SEQLaKdupLoLtcAo5
           - name: ZENDESK_API_USERNAME
             value: civil-legal-advice@digital.justice.gov.uk
           - name: PROJECT
