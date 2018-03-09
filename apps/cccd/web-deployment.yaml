@@ -1,0 +1,128 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.yml
+    kompose.version: 1.10.0 ()
+  creationTimestamp: null
+  labels:
+    io.kompose.service: web
+  name: web
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: web
+    spec:
+      containers:
+      - env:
+        - name: APPUSER
+          value: moj
+        - name: APP_BUILD_DATE
+          value: 2017-09-18T10:04:03+0000
+        - name: APP_BUILD_TAG
+          value: 2.4.2
+        - name: APP_GIT_COMMIT
+          value: 3389f78742bb027bb7a07ca14ccf958c17e49c1e
+        - name: APP_VERSION
+          value: v0.1.0-44-g3389f78
+        - name: BUILD_DATE
+          value: 2018-03-05T16:02:35+00:00
+        - name: BUILD_TAG
+          value: jenkins-advocate-defence-payments-build-2000
+        - name: BUNDLER_VERSION
+          value: 1.15.4
+        - name: BUNDLE_APP_CONFIG
+          value: /usr/local/bundle
+        - name: BUNDLE_BIN
+          value: /usr/local/bundle/bin
+        - name: BUNDLE_PATH
+          value: /usr/local/bundle
+        - name: BUNDLE_SILENCE_ROOT_WARNING
+          value: "1"
+        - name: CBO_BASE_DATABASE_HOST
+          value: db
+        - name: CBO_BASE_DATABASE_PASSWORD
+          value: yourPassword
+        - name: CBO_BASE_DATABASE_USERNAME
+          value: testuser
+        - name: CLUSTER_NODES
+        - name: CLUSTER_NODES_SAFE
+        - name: COMMIT_ID
+          value: 6a081be24235790c43704414c60f50a0f827e01e
+        - name: DISABLE_CSRF
+          value: "0"
+        - name: DOCKER_STATE
+          value: none
+        - name: ENV
+          value: dev
+        - name: GEM_HOME
+          value: /usr/local/bundle
+        - name: HOME
+          value: /root
+        - name: LC_ALL
+          value: C.UTF-8
+        - name: PROJECT
+          value: advocatedefencepayments
+        - name: RUBYGEMS_VERSION
+          value: 2.6.13
+        - name: RUBY_DOWNLOAD_SHA256
+          value: 748a8980d30141bd1a4124e11745bb105b436fb1890826e0d2b9ea31af27f735
+        - name: RUBY_MAJOR
+          value: "2.4"
+        - name: RUBY_VERSION
+          value: 2.4.2
+        - name: SECRET_ACCESS_KEY
+          value: 1j2yC0RpPnBNpynAHE0+mpan5MLMSdbqn4z/Hf7u
+        - name: SECRET_KEY_BASE
+          value: 55ccce8b983c1aeec433520051d6328552af00957f5a52eb51c12932a9717857389fd2a7e46149f0f2eb8c33a9db7684d9b3a238e8312fc0fd11245e5c66e8e2
+        - name: SETTINGS__GOVUK_NOTIFY__API_KEY
+          value: devapplicationstack-9456351f-782b-434d-8e0f-8c13a51a2fc5-4ec3b833-814b-4678-ab8e-8b08dc59d60e
+        - name: SETTINGS__GOVUK_NOTIFY__TEMPLATES__MESSAGE_ADDED_EMAIL
+          value: 4240bf0e-06cf-444e-9c30-0d1bb64a2fb4
+        - name: SETTINGS__GOVUK_NOTIFY__TEMPLATES__NEW_EXTERNAL_ADMIN
+          value: 2d180edf-2368-4080-8aee-791af3b308c1
+        - name: SETTINGS__GOVUK_NOTIFY__TEMPLATES__NEW_EXTERNAL_ADVOCATE_ADMIN
+          value: e55cda8b-d1a0-4279-bb05-08967a4edcb4
+        - name: SETTINGS__GOVUK_NOTIFY__TEMPLATES__NEW_EXTERNAL_LITIGATOR_ADMIN
+          value: b405712b-4852-40ad-bc79-77814eb62394
+        - name: SETTINGS__GOVUK_NOTIFY__TEMPLATES__NEW_USER
+          value: ed2faf1c-64b3-498c-96e7-9c837f64a687
+        - name: SETTINGS__GOVUK_NOTIFY__TEMPLATES__PASSWORD_RESET
+          value: 20878b17-585e-4ed1-bae9-387523c6dffe
+        - name: SETTINGS__GOVUK_NOTIFY__TEMPLATES__UNLOCK_INSTRUCTIONS
+          value: b96a016f-ffa7-4ea2-99be-800de19b4cfe
+        - name: SETTINGS__SLACK__BOT_NAME
+          value: Injectotron
+        - name: SETTINGS__SLACK__BOT_URL
+          value: https://hooks.slack.com/services/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
+        - name: SETTINGS__SLACK__CHANNEL
+          value: '#cccd_ccr_injection'
+        - name: SETTINGS__SLACK__FAIL_ICON
+          value: ':katyperry:'
+        - name: SETTINGS__SLACK__SUCCESS_ICON
+          value: ':taytay:'
+        - name: SSH_AUTH_PROXY_PORT
+          value: "1234"
+        - name: SSH_AUTH_SOCK
+          value: /tmp/ssh-auth
+        - name: SUPERADMIN_PASSWORD
+          value: 5uperbad!
+        - name: SUPERADMIN_USERNAME
+          value: superadmin@example.com
+        - name: TEST_CHAMBER_API_KEY
+          value: bd0fc362-2177-4355-9071-71b4d96fd3b7
+        - name: VERSION_NUMBER
+          value: "2000"
+        - name: adp_bucket_name
+          value: adp-dev-documents
+        image: 926803513772.dkr.ecr.eu-west-1.amazonaws.com/cccd:latest
+        name: web
+        ports:
+        - containerPort: 80
+        resources: {}
+      restartPolicy: Always
+status: {}

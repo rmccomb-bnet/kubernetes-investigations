@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: cccdpg
+spec:
+  template:
+    metadata:
+      labels:
+        app: cccdpg
+    spec:
+      containers:
+        -
+          image: 926803513772.dkr.ecr.eu-west-1.amazonaws.com/cccd-postgres
+          imagePullPolicy: Always
+          name: cccd-postgres
+          ports:
+            -
+              containerPort: 5432
+              name: cccd-postgres
